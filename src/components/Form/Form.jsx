@@ -19,7 +19,7 @@ const Form = () => {
       phone: auth.phone,
       address: auth.address,
     };
-    tg.sendData(JSON.stringify(auth));
+    tg.sendData(JSON.stringify(data));
   }, [auth]);
 
   useEffect(() => {
@@ -54,30 +54,30 @@ const Form = () => {
         name="user_name"
         className={"input"}
         type="text"
-        placeholder={"ФИО"}
+        placeholder={"Имя"}
         onChange={onChangeAuth}
       />
       <input
-        name="url"
+        name="surname"
         className={"input"}
         type="text"
-        placeholder={"Ссылка продукта"}
+        placeholder={"Фамилия"}
         onChange={onChangeAuth}
       />
 
       <input
-        name="count"
+        name="phone"
         className={"input"}
         type="number"
-        placeholder={"Количество товара"}
+        placeholder={"Номер телефон"}
         onChange={onChangeAuth}
       />
 
       <input
-        name="price"
+        name="address"
         className={"input"}
-        type="number"
-        placeholder={"Цена товара"}
+        type="text"
+        placeholder={"Адресс"}
         onChange={onChangeAuth}
       />
     </div>
